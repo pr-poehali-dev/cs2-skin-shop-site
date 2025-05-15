@@ -1,13 +1,12 @@
-
 import type { Config } from "tailwindcss";
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -63,18 +62,13 @@ const config = {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // CS2 skin theme colors
-        cs: {
-          'dark-blue': '#1A1F2C',
-          'purple': '#9B87F5',
-          'light-purple': '#E5DEFF',
-          'gray': '#8E9196',
-          'light-gray': '#F1F0FB',
-        }
+        "cs-dark-blue": "#1A1F2C",
+        "cs-purple": "#9b87f5",
+        "cs-light-gray": "#F1F0FB",
       },
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
-        rubik: ['Rubik', 'sans-serif'],
+        montserrat: ["Montserrat", "sans-serif"],
+        rubik: ["Rubik", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -91,28 +85,28 @@ const config = {
           to: { height: "0" },
         },
         fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
         slideUp: {
-          '0%': { transform: 'translateY(10px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+          "0%": { transform: "translateY(10px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
         },
         pulse: {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.5' },
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        fadeIn: 'fadeIn 0.5s ease-in-out',
-        slideUp: 'slideUp 0.6s ease-in-out',
-        pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        fadeIn: "fadeIn 0.3s ease-in-out",
+        slideUp: "slideUp 0.6s ease-in-out",
+        pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+};
 
 export default config;
